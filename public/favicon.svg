@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#3498db"/>
+  
+  <!-- Book pages -->
+  <rect x="30" y="25" width="40" height="50" rx="2" fill="#ffffff"/>
+  
+  <!-- Book spine -->
+  <rect x="48" y="25" width="4" height="50" fill="#2980b9"/>
+  
+  <!-- Page lines (left page) -->
+  <line x1="35" y1="35" x2="45" y2="35" stroke="#3498db" stroke-width="1.5"/>
+  <line x1="35" y1="42" x2="45" y2="42" stroke="#3498db" stroke-width="1.5"/>
+  <line x1="35" y1="49" x2="45" y2="49" stroke="#3498db" stroke-width="1.5"/>
+  <line x1="35" y1="56" x2="45" y2="56" stroke="#3498db" stroke-width="1.5"/>
+  <line x1="35" y1="63" x2="45" y2="63" stroke="#3498db" stroke-width="1.5"/>
+  
+  <!-- Page lines (right page) -->
+  <line x1="55" y1="35" x2="65" y2="35" stroke="#3498db" stroke-width="1.5"/>
+  <line x1="55" y1="42" x2="65" y2="42" stroke="#3498db" stroke-width="1.5"/>
+  <line x1="55" y1="49" x2="65" y2="49" stroke="#3498db" stroke-width="1.5"/>
+  <line x1="55" y1="56" x2="65" y2="56" stroke="#3498db" stroke-width="1.5"/>
+  <line x1="55" y1="63" x2="65" y2="63" stroke="#3498db" stroke-width="1.5"/>
+  
+  <!-- Bookmark -->
+  <path d="M 58 25 L 58 40 L 62 37 L 66 40 L 66 25 Z" fill="#e74c3c"/>
+</svg>

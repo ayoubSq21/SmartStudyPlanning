@@ -1,0 +1,231 @@
+.statistics-page {
+  animation: fadeIn 0.5s ease;
+}
+
+.stats-overview {
+  margin-bottom: 3rem;
+}
+
+.stats-overview h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-box {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+}
+
+.stat-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.stat-box.success {
+  border-left-color: var(--secondary-color);
+}
+
+.stat-box.warning {
+  border-left-color: var(--warning-color);
+}
+
+.stat-box.info {
+  border-left-color: var(--info-color);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-box.success .stat-value {
+  color: var(--secondary-color);
+}
+
+.stat-box.warning .stat-value {
+  color: var(--warning-color);
+}
+
+.stat-box.info .stat-value {
+  color: var(--info-color);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stats-section {
+  margin-bottom: 3rem;
+}
+
+.stats-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.subjects-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.subject-stat-card {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.subject-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.subject-stat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.subject-color-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.subject-stat-header h3 {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.subject-stat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.stat-row span {
+  color: var(--text-secondary);
+}
+
+.stat-row strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--bg-primary);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.5s ease;
+  border-radius: 4px;
+}
+
+.exam-info {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.day-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 1rem;
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  height: 300px;
+}
+
+.day-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.day-bar-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.day-bar {
+  width: 60%;
+  background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+  border-radius: 6px 6px 0 0;
+  transition: height 0.5s ease;
+  min-height: 10px;
+}
+
+.day-count {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+}
+
+.day-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .subjects-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .day-stats {
+    gap: 0.5rem;
+    padding: 1rem;
+    height: 250px;
+  }
+
+  .day-bar-container {
+    height: 150px;
+  }
+}
