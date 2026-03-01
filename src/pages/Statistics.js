@@ -6,17 +6,14 @@ import '../styles/Statistics.css';
 import { FiBarChart2 } from 'react-icons/fi';
 
 
-/**
- * Page de statistiques
- * ✅ useMemo pour optimiser les calculs complexes
- */
+
 const Statistics = () => {
   const subjects = useSelector(selectAllSubjects);
   const sessions = useSelector(selectAllSessions);
 
   // Calcul des statistiques avec useMemo
   const stats = useMemo(() => {
-    // Statistiques générales
+  
     const totalSessions = sessions.length;
     const completedSessions = sessions.filter(s => s.completed).length;
     const pendingSessions = totalSessions - completedSessions;

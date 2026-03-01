@@ -288,7 +288,6 @@ export const loginAsync = createAsyncThunk(
 
 ---
 
-## 🎓 Points Forts pour un Examen/CC
 
 ### ✅ Architecture Propre
 - Séparation des responsabilités
@@ -356,15 +355,6 @@ export const loginAsync = createAsyncThunk(
 
 ---
 
-## 👨‍💻 Auteur
-
-Projet créé pour démontrer la maîtrise de React et de ses concepts avancés dans le cadre d'un examen/CC.
-
----
-
-## 📄 Licence
-
-Ce projet est à usage éducatif.
 
 ---
 
@@ -381,4 +371,4 @@ Ce projet **Smart Study Planner** démontre une maîtrise complète de l'écosys
 - ✅ Dark/Light mode
 - ✅ Responsive design
 
-**C'est un projet parfait pour un examen car il couvre TOUTES les notions importantes tout en restant réalisable et utile !** 🚀
+

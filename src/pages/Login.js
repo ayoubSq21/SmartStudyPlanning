@@ -6,13 +6,7 @@ import { validators, validateForm } from '../utils/validators';
 import { useLanguage } from '../contexts/LanguageContext';
 import '../styles/Auth.css';
 
-/**
- * Page de connexion
- * ✅ useState pour gérer le formulaire
- * ✅ useSelector pour lire le state Redux
- * ✅ useDispatch pour déclencher des actions
- * ✅ Validation de formulaire
- */
+
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

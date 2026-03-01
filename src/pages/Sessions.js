@@ -4,7 +4,8 @@ import { addSession, toggleSessionComplete, deleteSession, selectAllSessions } f
 import { selectAllSubjects } from '../redux/slices/subjectsSlice';
 import { validators, validateForm } from '../utils/validators';
 import '../styles/Sessions.css';
-import { FiCheck, FiTrash2 , FiCalendar , FiEdit , FiRefreshCw} from 'react-icons/fi';
+import { FiCheck, FiTrash2 , FiCalendar , FiEdit , FiRefreshCw,FiMapPin } from 'react-icons/fi';
+import { FaMapPin } from "react-icons/fa"
 
 const Sessions = () => {
   const dispatch = useDispatch();
@@ -207,11 +208,11 @@ const Sessions = () => {
       )}
 
       {/* Sessions à venir */}
-      {upcomingSessions.length > 0 && (
-        <div className="sessions-section">
-          <h2>📌 À venir ({upcomingSessions.length})</h2>
-          <div className="sessions-list">
-            {upcomingSessions.map(session => {
+        {upcomingSessions.length > 0 && (
+          <div className="sessions-section">
+            <h2><FaMapPin /> À venir ({upcomingSessions.length})</h2>
+            <div className="sessions-list">
+              {upcomingSessions.map(session => {
               const subject = getSubjectById(session.subjectId);
               // Then replace the selection with:
                       return (
@@ -251,12 +252,12 @@ const Sessions = () => {
         </div>
       )}
 
-      {/* Sessions complétées */}
-      {completedSessions.length > 0 && (
-        <div className="sessions-section">
-          <h2>✅ Complétées ({completedSessions.length})</h2>
-          <div className="sessions-list">
-            {completedSessions.map(session => {
+        
+        {completedSessions.length > 0 && (
+          <div className="sessions-section">
+            <h2><FiCheck /> Complétées ({completedSessions.length})</h2>
+            <div className="sessions-list">
+          {completedSessions.map(session => {
               const subject = getSubjectById(session.subjectId);
               return (
                 <div key={session.id} className="session-item completed">

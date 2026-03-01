@@ -7,11 +7,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { FiBook, FiCheckSquare, FiClock, FiTrendingUp, FiPlus, FiCalendar, FiBarChart2 } from 'react-icons/fi';
 import '../styles/Dashboard.css';
 
-/**
- * Dashboard principal
- * ✅ useMemo pour optimiser les calculs de statistiques
- * ✅ useSelector pour accéder au state Redux
- */
+
 const Dashboard = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();

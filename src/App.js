@@ -20,13 +20,7 @@ import Statistics from './pages/Statistics';
 // Styles
 import './App.css';
 
-/**
- * Application principale
- * ✅ React Router v6
- * ✅ Redux Provider
- * ✅ Context Providers (Theme, Language)
- * ✅ Routes protégées
- */
+
 function App() {
   return (
     <Provider store={store}>

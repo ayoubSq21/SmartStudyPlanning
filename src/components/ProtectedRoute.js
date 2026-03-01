@@ -1,15 +1,17 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { isTokenValid } from '../redux/slices/authSlice'; // ✅ importer la fonction
 
 /**
  * Route protégée - redirige vers login si non authentifié
- * ✅ Démontre la protection de routes
+ * ✅ Vérifie maintenant le JWT en plus de l'user
  */
 const ProtectedRoute = ({ children }) => {
-  const user = useSelector((state) => state.auth.user);
+  const { user, token } = useSelector((state) => state.auth); // ✅ récupérer aussi le token
 
-  if (!user) {
+  // ✅ Double vérification : user existe ET token est valide
+  if (!user || !token || !isTokenValid(token)) {
     return <Navigate to="/login" replace />;
   }
 
