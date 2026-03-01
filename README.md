@@ -1,4 +1,4 @@
- Smart Study Planner - Application React Complète
+## Smart Study Planner - Application React Complète
 
 ## 🎯 Description du Projet
 
@@ -11,7 +11,10 @@
 - **Inscription** avec vérification des mots de passe
 - **Déconnexion** sécurisée
 - Routes protégées (accès uniquement si connecté)
-
+- **JWT (JSON Web Token)** pour la gestion sécurisée des sessions
+- Token stocké dans le `localStorage` et vérifié à chaque accès
+- Expiration automatique du token (1h)
+  
 ### 📚 Gestion des Matières
 - Ajouter/modifier/supprimer des matières
 - Assigner une couleur à chaque matière
@@ -236,30 +239,6 @@ npm test       # Lance les tests
 
 ## 📊 Démonstration des Concepts
 
-### useState + useEffect
-```javascript
-const [formData, setFormData] = useState({ name: '', email: '' });
-
-useEffect(() => {
-  localStorage.setItem('formData', JSON.stringify(formData));
-}, [formData]);
-```
-
-### useContext
-```javascript
-const { theme, toggleTheme } = useTheme();
-const { language, t } = useLanguage();
-```
-
-### useMemo pour les Statistiques
-```javascript
-const stats = useMemo(() => {
-  const totalSessions = sessions.length;
-  const completedSessions = sessions.filter(s => s.completed).length;
-  // ... autres calculs
-  return { totalSessions, completedSessions };
-}, [sessions]);
-```
 
 ### Redux Toolkit - Slice
 ```javascript
@@ -316,30 +295,6 @@ export const loginAsync = createAsyncThunk(
 - Context API pour les préférences UI
 - Synchronisation avec localStorage
 
----
-
-## 🔄 Évolutions Possibles
-
-1. **Backend réel**
-   - API REST avec Node.js/Express
-   - Base de données MongoDB/PostgreSQL
-
-2. **Fonctionnalités avancées**
-   - Notifications de sessions à venir
-   - Export PDF des statistiques
-   - Partage de planning
-
-3. **Optimisations**
-   - Code splitting
-   - Lazy loading des routes
-   - Service Workers (PWA)
-
-4. **Tests**
-   - Tests unitaires (Jest)
-   - Tests de composants (React Testing Library)
-   - Tests E2E (Cypress)
-
----
 
 ## 📚 Dépendances Utilisées
 
