@@ -1,4 +1,4 @@
-# 📚 Smart Study Planner - Application React Complète
+ Smart Study Planner - Application React Complète
 
 ## 🎯 Description du Projet
 
